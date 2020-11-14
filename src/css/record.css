@@ -1,0 +1,289 @@
+
+.data-wrap-record { background-color: #e9ebee; }
+
+.film-record { background-color: white; }
+
+.film-rec-description { padding: 10px; }
+
+.film-record {border: 1px gray solid; display: flex;}
+.film-record footer {height: 5px;}
+
+
+.film-rec-info { flex-direction: column;}
+
+
+.film-record
+{
+  background: lightgray;
+  width: 960px;
+  margin: 10px auto;
+  display: flex;  
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cast-person-info {
+  font-size: 1.25em;
+}
+
+
+.film-rec-title {  font-size: 1.2em; font-weight: 600; margin: 5px 0px 10px 0px; }
+.film-rec-title  span { font-size: 0.9em; font-weight: normal;}
+
+
+.film-info-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.film-rec-poster {
+  background: lightgray;
+  display: inline-block;
+  max-width: 300px;
+ 
+  
+} 
+
+.film-rec-poster img {
+    width: 100%; 
+}
+
+.film-rec-info { 
+  width: 360px; 
+  padding: 5px; 
+  display: flex; 
+  flex-direction: column;
+}
+
+
+.film-rec-popularity { float: left; margin: 10px auto -5px;}
+.film-rec-popularity span {
+  border: 2px gray solid; 
+  border-radius: 5px; 
+  padding: 0px 5px; 
+
+}
+.tv-show-info {
+  display: table-row;
+  margin-top: 20px;
+  vertical-align: middle;
+
+}
+
+.film-rec-number-of-seasons {
+  margin-top: 5px;
+}
+
+.film-record header {
+  padding: 0px;
+  margin-bottom: 5px;
+  background-color:  #007cb2;
+}
+
+.film-record header .film-rec-title {
+  text-align: center;
+  margin-bottom: -10px;
+  color: white;
+}
+
+
+
+.film-rec-description { 
+  float: left; 
+  text-align: left; 
+}
+
+
+.film-rec-description p{  margin: 5px; font-size: 1.2em; font-style: italic; border-top: 1px gray solid; }
+.rec-genres {float: right; margin-top: 10px;}
+.rec-genres span { 
+    display: inline-block; float: left; font-size: 0.8em;
+    padding: 2px 5px; margin: 5px; border: 1px gray solid; border-radius: 5px;  
+  }
+
+.film-rec-release-date {float: left; margin: 5px;}
+
+.film-rec-countries {
+  float: left; margin: 5px; font-size: 0.65em;
+  
+}
+
+.film-rec-countries span {
+  
+
+  display: block;
+  vertical-align: bottom;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.film-rec-countries ul {
+  display: block;
+  margin-block-start: 0em;
+  font-size: 1.2em;
+}
+
+.film-rec-countries li {
+  display: inline-block;
+  float: left;  
+  margin: 0px 5px; padding: 2px 5px; 
+  border: 1px gray solid; 
+  border-radius: 5px;
+}
+
+.crew-wrapp {
+  padding: 0px;
+
+}
+
+.cast-list { text-align: left; border-top: 1px gray solid; margin: 15px;}
+
+
+.cast-list-wrapper span { margin: 0px 10px;} 
+
+.cast-list-wrapper ul { 
+   padding-inline-start: 20px;
+   -webkit-padding-start: 20px;
+    padding-inline-start: 20px;
+    margin-block-start: 0px;
+
+}
+
+
+.btn-back-wrap {
+  text-align: right;  
+  background: blue;  
+  background-color: #650700;
+}
+
+.btn-back {
+  width: 20px;  
+  height: 20px;
+  margin: 5px;
+  font-weight: 600;
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.btn-record-back {
+  float: right;
+  color: #007cb2;
+  background-color: #f2f2f2;
+  margin: 2px;
+  border: none;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 840px) {
+  film-info-wrap {width: 100%; }  
+.film-record {display: flex; width: 100%; margin: 0px; }
+.film-rec-poster { width: 80%; padding: 0px;}
+.data-wrap-record {  margin: 0px; }
+}
+
+
+@media only screen and (min-width: 410px) and (max-width: 720px) {
+.film-info-wrap  {width: 100%; }  
+.film-record {width: 100%; }
+.film-rec-poster { width: 100%;}
+.data-wrap-record {  margin: 0px; }
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 410px) {
+.film-info-wrap  {width: 330px; }  
+.film-record {width: 330px; }
+.film-rec-poster { width: 330px;}
+.data-wrap-record {  margin: 0px; }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 360px) {
+
+.film-info-wrap {width: 320px; }  
+
+.similar-films-wrap h3 {
+  color: red;
+}
+
+.film-record {display: flex; width: 320px; margin: 0px; }
+.film-rec-poster { width: 300px; padding: 0px; }
+.data-wrap-record {  margin: 0px; }
+}
+@media only screen and (max-width: 320px) {
+.film-info-wrap {width: 280px; }  
+.film-record {display: flex; width: 280px; margin: 0px; }
+.film-rec-poster { width: 280px; padding: 0px; }
+.data-wrap-record {  margin: 0px; }
+
+}
+
+
+.similar-list li {
+  list-style: none;
+  max-width: 250px;
+}
+
+
+.similar-list  {
+    
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background-color: #e9ebee;
+}
+
+.similar-list-row {
+  display: table-row;
+}
+.imilar-list-cell {
+  display: table-cell;
+
+}
+.similar-title {
+  width: 150px;
+  height: 30px;
+  vertical-align: middle;
+  background-color: #650700;
+  color: white;
+}
+
+.similar-poster {
+  width: 150px; height: 255px;
+  vertical-align: top;
+}
+
+.similar-link  {
+  text-decoration: none;
+  background-color: #d3d3d3;
+  border: 1px #d3d3d3 solid;
+  padding: 0px;   
+  margin: 5px;
+  
+}
+
+.similar-film {
+    font-size: 0.95em;
+    margin: 10px;
+    border: 1px gray solid;
+    display: table;
+
+}
+
+.similar-list-content h3 {
+  margin: 0px; padding: 0px;
+  margin-block-start: 0px;
+    margin-block-end: 0px;
+    color: #114373;
+}
+
+.similar-list-content  ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+
+}

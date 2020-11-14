@@ -1,0 +1,199 @@
+//  33333333333333333/
+//
+
+started 20191102
+https://www.themoviedb.org/documentation/api
+
+Начни с оффициальной документации React’a, затем React Router. Этого будет достаточно для начала, пиши какой нибудь пет-проект. Например возьми the-movie-db api, и создай аналог их сайта, туда же прикрутишь авторизацию. Это займет недели для новичка. 3-4
+
+discover
+    - movies
+    - tvshows
+    раздел фильтрует инфу
+    год, сортировка по популярность, жанр, ключевые слова (????),
+movies
+    - popular
+    - top rating
+    - upcoming
+    - now plaing
+tvshows  // сериалы
+    - popular
+    - top rating
+    - on tv
+    - Airing Today    
+people
+    - Popular People
+
+для каждого раздела ответ в виде таблицы (есть выбор способа отображения таблицы)
+для каждого раздела есть поиск (список слов для поиска ограничен)
+для каждого элемента есть more-info
+
+movies - moreinfo
+    poster, описание, отзывы, список видео, картинки, изменения, список актеров
+    каждый актер => people.more-info, список рекомендаций => movies
+
+people - more infoo
+    изображение (увеличивается), персональн инфо, биография, фильмотека (=> ref movies-more-info), обсуждение
+
+--------------------
+https://www.themoviedb.org/documentation/api
+все то же самое
+keys по адр
+https://www.themoviedb.org/settings/api
+
+
+my info  https://www.themoviedb.org/talk/5c616d229251412faefa9784#5c616d229251412faefa9786
+
+API Key: ce5c20bf64147f63a02f9933daeac4a5
+example  https://api.themoviedb.org/3/movie/550?api_key=ce5c20bf64147f63a02f9933daeac4a5
+
+https://api.themoviedb.org/3/movie/
+https://www.themoviedb.org//52AfXWuXCHn3UjD17rBruA9f5qb.jpg
+
+
+// док api
+!!!! https://developers.themoviedb.org/3/discover/movie-discover
+
+https://api.themoviedb.org/3/certification/movie/list?api_key=api_key=ce5c20bf64147f63a02f9933daeac4a5
+
+
+https://image.tmdb.org/t/p/w300_and_h450_bestv2/wNJF8R5QE6nBT7DQoKk8t6YD1MM.jpg
+
+https://image.tmdb.org/t/p/w185_and_h278_bestv2/wNJF8R5QE6nBT7DQoKk8t6YD1MM.jpg
+
+https://image.tmdb.org/t/p/w600_and_h900_bestv2/wNJF8R5QE6nBT7DQoKk8t6YD1MM.jpg
+
+
+
+https://image.tmdb.org/t/p/w600_and_h900_bestv2/3nag9eCEMIo4yVZD7sKLodEPe8T.jpg
+
+https://image.tmdb.org/t/p/w600_and_h900_bestv2/59qyrVGLLtrcuFtJGdixzn7H4OI.jpg
+
+
+
+https://image.tmdb.org/t/p/w500/3nag9eCEMIo4yVZD7sKLodEPe8T.jpg
+
+https://image.tmdb.org/t/p/w500/59qyrVGLLtrcuFtJGdixzn7H4OI.jpg
+
+https://api.themoviedb.org/3/movie/%7Bmovie_id%7D/lists?page=1&language=en-US&api_key=ce5c20bf64147f63a02f9933daeac4a5
+https://api.themoviedb.org/3/movie/{movie_id}/lists?api_key=ce5c20bf64147f63a02f9933daeac4a5&language=en-US&page=1
+
+https://api.themoviedb.org/3/search/movie?api_key=ce5c20bf64147f63a02f9933daeac4a5&query=Martin
+
+
+
+фильтры-сортировки
+год  сортировка  жанр  [ключевые слова]
+
+https://api.themoviedb.org/3/search/movie?api_key=ce5c20bf64147f63a02f9933daeac4a5&query
+https://api.themoviedb.org/3/movie/399579/reviews?api_key=ce5c20bf64147f63a02f9933daeac4a5&language=en-US&page=1
+
+detail:
+https://api.themoviedb.org/3/movie/324857?api_key=ce5c20bf64147f63a02f9933daeac4a5&language=ru-RU
+
+similar
+https://api.themoviedb.org/3/movie/324857/similar?api_key=ce5c20bf64147f63a02f9933daeac4a5&language=ru-RU&page=1
+
+filter, pager, regims +
+fixme  pager-dblclick
+ficmr  filter..
+----------- победили пагинатор и фильтр (первій клик) 
+nb есть ограничение  на кол-во страниц в пагинатора
+! done search
+
+TODO 
+React Router
+очистка полей ввода
+propTypes
+TODO UI  
+npm install @material-ui/core
+npm install typeface-roboto --save
+npm install @material-ui/icons
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+heap
+https://material.io/tools/icons/?style=baseline
+https://material-ui.com/style/icons/#font-icons
+
+
+
+
+плучить список актеров
+https://api.themoviedb.org/3/movie/84254/credits?api_key=ce5c20bf64147f63a02f9933daeac4a5&language=ru-RU
+
+
+https://api.themoviedb.org/3/tv/1399/credits?api_key=ce5c20bf64147f63a02f9933daeac4a5&language=ru-RU
+
+
+        // фильтрова имя на кирилицу
+        /*
+
+            GOOGLE search   result
+            https://goo.gl/gEkawk
+
+            function check_lng() {
+                var regexp = /^[а-яё]+$/i;
+                var text1 = document.getElementById('text').value;
+                if(text1.match(regexp)) {
+                alert("RUS");
+                }
+            }
+
+            
+            http://www.cyberforum.ru/javascript-regexp/thread786999.html
+
+        */
+
+
+        //this.setState({cast:data})
+
+     //console.log(data.cast[1])
+
+     interesting maket   http://torrentik.co/1678-lyubovnik-1992.html
+
+
+чистка unmount
+https://nguyenhungkhanh.blogspot.com/2019/01/how-to-fix-cancel-all-subscriptions-and.html
+https://github.com/jaredpalmer/formik/issues/772     
+
+NB!  http://qaru.site/questions/16241350/cancel-all-subscriptions-and-asyncs-in-the-componentwillunmount-method-how
+
+
+спускать fetch вниз по дереву - глупость. все делается в  компоненте смонтированном на root
+then
+все запросы к данным в Record делаются в Record
+Similar
+Person (Cast, Crew)
+
+
+FIXME only 5 clicked of similar
+изменить базовые url на наличие нужн данных
+напр описание, кастинг, постер и т.п.
+обработчик ошибок, если нет данных
+фильтр
+TODO: react-router
+rmovie/film/1
+rmovie/film/12345
+rmovie/tvshow/1
+rmovie/tvshow/12345
+
+TODO определить Props
+
+
+
+{/*
+             <input type="text" onChange={this.setQuery} value={this.state.query} value={this.state.query}  />
+             <button type='button' onClick={this.handleSearch}>Search</button>
+*/}
+
+ссылки по стилям  
+---- select 2019
+https://www.filamentgroup.com/lab/select-css.html
+https://codepen.io/danield770/pen/bgJOyV?editors=1100
+
+https://www.w3schools.com/icons/default.asp
+
+
+TODO routing
