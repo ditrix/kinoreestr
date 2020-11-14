@@ -4,3 +4,6 @@ kinoreestr
 
 [FontAwesome] (https://fontawesome.com/how-to-use/on-the-web/using-with/react)
 
+[demo] (http://kino.dmvoloshin.adr.com.ua/)
+
+далі буде...
