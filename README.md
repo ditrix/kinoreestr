@@ -1,9 +1,6 @@
-kinoreestr
+## kinoreestr
 
 [API and DataSource] (https://developers.themoviedb.org/3/authentication/how-do-i-generate-a-session-id)
 
-[FontAwesome] (https://fontawesome.com/how-to-use/on-the-web/using-with/react)
 
-[demo] (http://kino.dmvoloshin.adr.com.ua/)
-
-далі буде...
+[demo] (http://kinoreestr.ditrix.adr.com.ua/)
